@@ -9,18 +9,12 @@
 #include <map>
 #include <algorithm>
 #include <string>
-
 using mapOperators = std::map<std::string, std::function<double(double, double)>>;
-
-class Operations {
-
-	Operations(const Operations&) = delete;
-
-	Operations& operator=(Operations const&) = delete;
-
+class Operation {
+	Operation(const Operation&) = delete;
+	Operation& operator=(Operation const&) = delete;
 	mapOperators operations;
 public:
-	Operations();
-
+	Operation();
 	double operation(double const& a, std::string const& name, double const& b);
 };
